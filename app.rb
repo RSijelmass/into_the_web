@@ -10,7 +10,10 @@ get '/secret' do
 end
 
 get '/cat' do
-   "<div>
-    <img src=' http://bit.ly/1eze8aE'>
-   </div>"
+   "<div class='brd'>
+    <img src='http://bit.ly/1eze8aE'>
+   </div>
+   <style contenteditable>
+    .brd { border: 3px dashed red;}
+   </style>"
 end
