@@ -1,19 +1,23 @@
 
-<div style= "border: 3px dashed red" >
-  <img src='mr_meeseeks.jpeg'>
-</div>
-
 <% if @name %>
   <h1> My name is <%=@name%></h1>
-<% else %>
-  <form action="/named-cat">
-    <input type="text" name="name">
-    <input type='submit' value="Submit">
-  </form>
 <% end %>
 
-<% if @mood %>
-  <h2> And I'm feeling <%=@mood%>!</h2>
+<% if @mood == 'happy'%>
+  <h2> HI! I'M MR MEESEEKS! LOOK AT ME!</h2>
+  <div style= "border: 3px dashed red" >
+    <img src='mr_meeseeks.jpeg'>
+  </div>
+
+<% elsif @mood == 'sad' || @mood == 'stressed'%>
+  <h2> I JUST WANNA DIE!</h2>
+  <div style= "border: 3px dashed red" >
+    <img src='meeseeks_stressed.jpg'>
+  </div>
+
 <% else %>
-  <h2> Existence is pain. </h2>
+  <h2> Existence is pain.
+    <div style= "border: 3px dashed red" >
+      <img src='meeseeks_space.jpg'>
+    </div> </h2>
 <% end %>
